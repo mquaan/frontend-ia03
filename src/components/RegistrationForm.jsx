@@ -12,7 +12,7 @@ function RegistrationForm() {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post('http://localhost:3000/user/register', data);
+      const response = await axios.post('https://backend-ia03-production.up.railway.app/user/register', data);
       setStatus({ message: response.data.message || 'Registered successful!', type: 'success' });
     } catch (error) {
       setStatus({ message: error.response?.data?.message || 'Registration failed!', type: 'error' });

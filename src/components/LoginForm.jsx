@@ -12,7 +12,7 @@ function LoginForm() {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post('http://localhost:3000/auth/login', data);
+      const response = await axios.post('https://backend-ia03-production.up.railway.app/auth/login', data);
       setStatus({ message: response.data.message || 'Login successful!', type: 'success' });
     } catch (error) {
       setStatus({ message: error.response?.data?.message || 'Login failed', type: 'error' });
